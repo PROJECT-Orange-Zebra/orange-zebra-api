@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Orange.Zebra.Domain\Orange.Zebra.Domain.csproj" />
+    <ProjectReference Include="..\Orange.Zebra.Data\Orange.Zebra.Data.csproj" />
   </ItemGroup>
 
 </Project>
