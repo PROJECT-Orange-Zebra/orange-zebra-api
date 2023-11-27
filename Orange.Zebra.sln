@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange.Zebra.Domain", "Oran
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange.Zebra.Data", "Orange.Zebra.Data\Orange.Zebra.Data.csproj", "{9EA98431-A1B8-4640-93F2-5980A0FA7EFD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C267DC3B-FB04-4461-B6B4-CC843C6F2D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange.Zebra.Domain.Tests", "tests\Orange.Zebra.Domain.Tests\Orange.Zebra.Domain.Tests.csproj", "{4B8885DA-51ED-4170-A825-D084C2024B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{9EA98431-A1B8-4640-93F2-5980A0FA7EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EA98431-A1B8-4640-93F2-5980A0FA7EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EA98431-A1B8-4640-93F2-5980A0FA7EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8885DA-51ED-4170-A825-D084C2024B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8885DA-51ED-4170-A825-D084C2024B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8885DA-51ED-4170-A825-D084C2024B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8885DA-51ED-4170-A825-D084C2024B83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B8885DA-51ED-4170-A825-D084C2024B83} = {C267DC3B-FB04-4461-B6B4-CC843C6F2D33}
 	EndGlobalSection
 EndGlobal
