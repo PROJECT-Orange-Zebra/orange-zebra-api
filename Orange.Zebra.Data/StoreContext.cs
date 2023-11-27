@@ -1,5 +1,6 @@
 ﻿using Orange.Zebra.Domain.Catalog;
 using Microsoft.EntityFrameworkCore;
+using Orange.Zebra.Domain.Orders;
 namespace Orange.Zebra.Data
 {
     public class StoreContext: DbContext   
@@ -8,6 +9,7 @@ namespace Orange.Zebra.Data
         :base(options)
         {}
         public DbSet<Item> Items { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc; 
 using Orange.Zebra.Domain.Catalog;
 using Orange.Zebra.Data;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Orange.Zebra.Api.Controllers
@@ -37,7 +38,7 @@ namespace Orange.Zebra.Api.Controllers
         {
             _db.Items.Add(item);
 	        _db.SaveChanges();
-	        return Created($”/catalog/{item.Id}”, item);
+	        return Created($"/catalog/{item.Id}", item);
         }
 
         [HttpPost("{id:int}/ratings")]
@@ -48,7 +49,7 @@ namespace Orange.Zebra.Api.Controllers
             {
                 return NotFound();
             }
-            item.AddRating(Rating);
+            item.AddRating(rating);
             _db.SaveChanges();
 
             return Ok(item);
@@ -57,7 +58,7 @@ namespace Orange.Zebra.Api.Controllers
         [HttpPut("{id:int}")]
         public IActionResult PutItem(int id, [FromBody] Item item)
         {
-            if (id ≠ item.Id)
+            if (id != item.Id)
             {
                 return BadRequest();
             }
@@ -81,7 +82,7 @@ namespace Orange.Zebra.Api.Controllers
 	        {
 		        return NotFound();
 	        }
-            _db.ItemsRemove(item);
+            _db.Items.Remove(item);
             _db.SaveChanges();
             
             return Ok();
