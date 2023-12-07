@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Orange.Zebra.Domain.Catalog;
 using Orange.Zebra.Data;
 using Microsoft.EntityFrameworkCore;
+using Orange.Zebra.Api.Security;
 
 
 namespace Orange.Zebra.Api.Controllers
@@ -75,6 +76,7 @@ namespace Orange.Zebra.Api.Controllers
 
 
         [HttpDelete("{id:int}")]
+        [Authorize("delete:catalog")]
         public IActionResult Delete(int id)
         {
             var item = _db.Items.Find(id);
