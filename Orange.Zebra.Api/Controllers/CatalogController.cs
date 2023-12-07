@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Orange.Zebra.Domain.Catalog;
 using Orange.Zebra.Data;
 using Microsoft.EntityFrameworkCore;
-using Orange.Zebra.Api.Security;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Orange.Zebra.Api.Controllers
