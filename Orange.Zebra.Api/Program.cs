@@ -2,7 +2,7 @@ using Orange.Zebra.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Orange.Zebra.Api.Security;
+using Orange.Zebra.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
