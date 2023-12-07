@@ -27,10 +27,10 @@ builder.Services.AddAuthentication(options =>
 		options.Audience = audience;
     });
 
-builder.Services.AddAuthentication(options =>
+builder.Services.AddAuthorization(options =>
 	{
 		options.AddPolicy("delete:catalog", policy =>
-			policy.RequireAuthenticatedUser().RequiredClaim("scope", "delete:catalog"));
+			policy.RequireAuthenticatedUser().RequireClaim("scope", "delete:catalog"));
 	});
 
 builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data Source = ../Registrar.sqlite"
