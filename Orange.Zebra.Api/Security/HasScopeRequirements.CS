@@ -8,7 +8,7 @@ namespace Orange.Zebra.Api.Security
 		public string Issuer { get; }
 		public string Scope {get; }
 		
-		public class HasScopeRequirements(string scope, string issuer)
+		public HasScopeRequirements(string scope, string issuer)
 		{
 			Scope = scope ?? throw new ArgumentNullException(nameof(scope));
 			Issuer = issuer ?? throw new ArgumentNullException(nameof(issuer));
