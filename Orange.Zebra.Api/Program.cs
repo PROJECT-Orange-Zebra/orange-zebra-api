@@ -39,7 +39,7 @@ builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data S
 
 builder.Services.AddCors(options =>
 	{
-		options.AddDefautPolicy(builder =>
+		options.AddDefaultPolicy(builder =>
 		{
 			builder.WithOrigins("https://localhost:3000")
 				.AllowAnyHeader()
