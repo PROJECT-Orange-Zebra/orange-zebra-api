@@ -44,7 +44,7 @@ builder.Services.AddCors(options =>
 	{
 		options.AddDefaultPolicy(builder =>
 		{
-			builder.WithOrigins("https://localhost:3000")
+			builder.WithOrigins("delightful-flower-00f65ee0f.4.azurestaticapps.net")
 				.AllowAnyHeader()
 				.AllowAnyMethod();
 		});
